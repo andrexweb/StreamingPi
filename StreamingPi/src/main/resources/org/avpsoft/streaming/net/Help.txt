@@ -1,0 +1,17 @@
+************************************************************************
+CONNECT <server> <port> 
+ 	 server: raspberry pi ip
+ 	 port: for connection 
+SETPORT <port> 
+ 	 local port, for receiver transfer of stream 
+RUNPI <command> 
+ 	 command: run command into PI 
+	RUNPI raspivid -n -t 0 -w 640 -h 480 -fps 10 -o - 
+	RUNPI raspistill -n -t 0 -tl 150 -th 0:0:0 -w 640 -h 480 -q 5 -o - 
+STATUS
+        estado de la conexion
+STOP
+        deteniede el stream
+BYE
+        cierra la conexion
+************************************************************************
